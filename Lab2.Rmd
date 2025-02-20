@@ -2,7 +2,7 @@
 title: "Lab2"
 author: "SAF"
 date: "`r Sys.Date()`"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -28,3 +28,108 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+
+
+
+
+
+#################################################################################################################
+Laboratory 2
+Please review the laboratory prompt very carefully
+
+General Requirements
+Laboratory reports should be rendered as a PDF or HTML file using RMarkdown and must contain the following:
+
+Component	Requirement
+Headers	Headers are used to organize document by question
+Written responses	All qualitative responses to questions should be completed outside of code chunks showing source code and must be at least three sentences long where each sentence independently contributes to the question prompt
+Source code	All source code is required
+Comment lines*	Comment lines must explain logic of program
+Code Output	All code output is required
+* Comment lines should not be used to answer qualitative questions!
+Grading rubric
+Section	Score
+Write Up	10
+Part I	10
+Part II	10
+Part III	10
+Instructions
+#################################################################################################################
+
+Part 1: Introduction to modeling using basic R syntax
+Congratulations, you have puppy fever! As someone who is inflicted with puppy fever, you would like to buy as many puppies as you perceivably can. To help you determine if you can afford all of the puppies you want or to determine how many puppies you can afford, you opt to use R to help you. In this exercise, please print the contents of each variable after you declare it.
+
+Create a variable puppies equal to the number of puppies you’d like to have.
+
+Create a variable puppy_price, which is how much you think a puppy costs.
+
+Create a variable total_cost that has the total cost of all of your puppies.
+
+Create a boolean variable too_expensive, set to TRUE if the cost is greater than $1,000.
+
+Create a variable max_puppies, which is the number of puppies you can afford for $1,000.
+
+#################################################################################################################
+Part 2: Manipulating variables and learning how to use new functions
+You work as a data analyst for a new company and are asked to create id tags for everyone at work. Your goal is to make it informative as well as personal to help facilitate collaboration in the work place. To do this, you first want to gather information about each employee.
+
+Assign your name to the variable my_name in four different ways.
+
+Assign your height (in inches) to a variable my_height.
+
+Assign your favorite day to a varialbe favorite_day as a date object.
+
+Assign your favorite quote to a variable favorite_quote. How many characters does your favorite quote have?
+
+Show what type of objects my_name, my_height, favorite_day, and favorite_quote are.
+
+Coerce these variables to numerics and describe what happens.
+
+Create a vector variable named id that contains my_name, my_height, favorite_day, and favorite_quote.
+
+What class is id? Did the classes for my_name, my_height, favorite_day, and favorite_quote change when they were stored in id? Did the classes change for the variables themselves?
+
+
+Your employer wants you to be able to print each employee’s id while displaying each variable of information line by line. As a beginner with R, however, you are unfamiliar with how to do this so your employer gives you a hint to use the functions cat and paste.
+
+Try using cat and paste with id as a function argument. How do the results differ? What happens when we use cat and paste at the same time (i.e. f(g(x)))? What happens if we change the order we use them (i.e. g(f(x)))?
+
+How would you determine the difference between cat and paste using R documentation (from within RStudio)? What is a great internet resource to use as discussed in the book?
+
+What do sep and collapse arguments for paste do? If we wanted to append each character variable in our vector id with a new line (i.e. "\n") would we use sep or collapse?
+
+Display the contents of id using a combination of cat and paste with the appropriate arguments for paste.
+
+#################################################################################################################
+
+Part 3: Accessing data in GitHub and mastering order of operations
+Your employer asks you to solve for x using the quadratic equation:
+
+
+
+The values for a, b, and c are the min, max, and mean respectively of a data set that your employer has on GitHub.
+
+In module 3, you were required to fork this repository to your GitHub and then clone it to your machine. To access the data set for determining a, b, and c we need to pull from the original repository onto our machine using GitHub. Before you can sync your fork with an upstream repository, however, you must configure a remote that points to the upstream repository. See LINK for help. After syncing, please click on data.RData in Module-4 to load the data set into your environment. Alternatively (and preferred), please use load followed by a character argument of the directory path to load the data set into your environment.
+
+Please calculate a (using min), b (using max), and c (using mean) from data. Pay careful attention to follow order of operations (PEMDAS)
+
+Use a, b, and c to solve for x using the quadratic equation. You will need to do this for + and - in the quadratic equation (i.e. you should have TWO answers). Please display the answer as x = {x1, x2} using cat and paste. In part 2 we used paste to display the contents of a vector, here we use it to concatenate different vaariables into one expression.
+
+Example of how to use paste
+
+section <- 165
+date <- Sys.Date()
+cat(paste("We are taking CSIT_", section, "and today is", date, "!\n"))
+## We are taking CSIT_ 165 and today is 2022-01-17 !
+
+
+
+
+
+
+
