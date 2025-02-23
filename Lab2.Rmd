@@ -142,48 +142,56 @@ Try using cat and paste with id as a function argument. How do the results diffe
 What happens when we use cat and paste at the same time *(i.e. f(g(x)))*?
 What happens if we change the order we use them *(i.e. g(f(x)))*?
 ```{R Part 2i, echo=FALSE}
-message("-----------------------------------------------------------------------------------")
 cat("cat function(id):",id, sep=", ", "\n")
-message("-----------------------------------------------------------------------------------")
-paste("paste function(id):",id, sep=", ")
-message("-----------------------------------------------------------------------------------")
-cat(paste(id))
-message("-----------------------------------------------------------------------------------")
+message("paste function(id):")
+paste(id, sep=", ")
+cat("f(g(x))-Using paste function: ", paste(id))
+message("g(f(x))-Using cat function: ")
 paste(cat(id))
-message("-----------------------------------------------------------------------------------")
 ```
 
+**2j.Difference between cat and paste ** How would you determine the difference between 
+cat and paste using R documentation (from within RStudio)?
 
+What is a great internet resource to use as discussed in the book? RStudipo
+https://forum.posit.co/
+https://www.rdocumentation.org/
+
+What do sep and collapse arguments for paste do?
+They control the spacing between each string fragment (word). Where collapse removes all spaces and the Sep command allows the user to dictate the char that will be used to speratarte the string sements. 
+
+If we wanted to append each character variable in our vector id with a new line (i.e. \\n) would we use sep or collapse?
+To add a new line (\\n) to each character variable in a vector, you would first add the new line character to each element using paste() and then collapse them into a single string
+
+**2k. cat and paste** Display the contents of the id function using a combination of cat and paste with the appropriate arguments for paste.
 ```{R Part 2 tmp, echo=FALSE}
-message("-----------------------------------------------------------------------------------")
-
-message("Try using cat and paste with id as a function argument. How do the results differ?")
-
-message("What happens when we use cat and paste at the same time (i.e. f(g(x)))?")
-
-message("What happens if we change the order we use them (i.e. g(f(x)))?")
-
-message("How would you determine the difference between cat and paste using R documentation (from within RStudio)?")
-
-message("What is a great internet resource to use as discussed in the book?")
-
-message("What do sep and collapse arguments for paste do?")
-
-message("If we wanted to append each character variable in our vector id with a new line (i.e. \\n) would we use sep or collapse?")
-
-message("Display the contents of id using a combination of cat and paste with the appropriate arguments for paste.")
-
+numbered_list <- paste(1:length(id), id, sep = ". ")
+cat(numbered_list, sep = "\n")
 ```
+
+
+
 
 
 # Part III: Accessing data in GitHub and mastering order of operations
 
-```{R Part 3, include=FALSE}
+```{R Part 3a, include=FALSE}
+A <-
+B <-
+C <-
+
+```
+
+```{R Part 3b, echo=FALSE}
+message("-----------------------------------------------------------------------------------")
+
+
+```
+
+
+```{R Part 3 Instructions, include=FALSE}
 #Part 3: Accessing data in GitHub and mastering order of operations
 #Your employer asks you to solve for x using the quadratic equation:
-
-
-
 #The values for a, b, and c are the min, max, and mean respectively of a data set that your employer has on GitHub.
 
 #In module 3, you were required to fork this repository to your GitHub and then clone it to your machine. To access the data set for determining a, b, and c we need to pull from the original repository onto our machine using GitHub. Before you can sync your fork with an upstream repository, however, you must configure a remote that points to the upstream repository. See LINK for help. After syncing, please click on data.RData in Module-4 to load the data set into your environment. Alternatively (and preferred), please use load followed by a character argument of the directory path to load the data set into your environment.
