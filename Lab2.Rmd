@@ -26,7 +26,7 @@ cat("I'd like to buy", puppies,"puppies.")
 ```{R Part 1b, echo=FALSE}
 #Price of each puppy is $500.
 puppy_price <- 500.00
-cat("The price of each puppy is $", puppies*puppy_price,".")
+cat("The price of each puppy is $", puppy_price,".")
 ```
 
 **Integer:** *max_puppies* variable holds Qty of puppies you can afford for $1,000.
