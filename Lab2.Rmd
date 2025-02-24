@@ -175,17 +175,22 @@ cat(numbered_list, sep = "\n")
 
 # Part III: Accessing data in GitHub and mastering order of operations
 
-```{R Part 3a, include=FALSE}
-A <-
-B <-
-C <-
-
-```
-
 ```{R Part 3b, echo=FALSE}
-message("-----------------------------------------------------------------------------------")
-
-
+load("W:/CSIT165_RProgramming/_repos/CSIT165-ModData/Module-4/data.RData")
+message("a--------------------------------------")
+Mod4Data <- data
+a <- min(Mod4Data)
+b <- max(Mod4Data)
+c <- mean(Mod4Data)
+print(paste("The min value is:", a))
+print(paste("The max value is:", b))
+print(paste("The mean value is:", c))
+message("b--------------------------------------")
+Xplus <- (-b+sqrt((b^2)-(4*a*c)))/(2*a)
+Xminus <- (-b-sqrt((b^2)-(4*a*c)))/(2*a)
+print(paste("The X+ root is:", Xplus))
+print(paste("The X- root is:", Xminus))
+message("c--------------------------------------")
 ```
 
 
