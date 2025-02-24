@@ -9,10 +9,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Part I: Introduction to modeling using basic R syntax
-.*Congratulations, you have puppy fever! As someone who is inflicted with puppy 
-fever, you would like to buy as many puppies as you perceivable can. To help 
-you determine if you can afford all of the puppies you want or to determine 
-how many puppies you can afford, you opt to use R to help you. In this 
+.*Congratulations, you have puppy fever! As someone who is inflicted with puppy
+fever, you would like to buy as many puppies as you perceivable can. To help
+you determine if you can afford all of the puppies you want or to determine
+how many puppies you can afford, you opt to use R to help you. In this
 exercise, please print the contents of each variable after you declare it.*
 
 **Integer:** *puppies* variable holds the number of puppies you’d like to have.
@@ -87,7 +87,7 @@ cat("My height is",my_height,"inche/s")
 ```{R Part 2d, echo=FALSE}
 favorite_quote <- "Whiskey is for drinking; water is for fighting over."
 count <- nchar(favorite_quote)
-cat("My favorite qoute is about 
+cat("My favorite qoute is about
     water,", favorite_quote, "It has",count,"characters.")
 ```
 
@@ -96,7 +96,7 @@ cat("My favorite qoute is about
 ```{R Part 2e, echo=FALSE}
 
 cat("my_name variable type is a", typeof(my_name))
-    
+
 cat("\nfavorite_day variable type is a", typeof(favorite_day))
 
 cat("\nmy_height variable type is an", typeof(my_height))
@@ -108,7 +108,7 @@ cat("\nfavorite_qoute variable type is a", typeof(favorite_quote))
 
 **2f.Coerce these variables** to a *numeric* and describe what happens.
 ```{R Part 2f, echo=FALSE}
-message("The height variable doesn't generate an error message. The remaining variables 
+message("The height variable doesn't generate an error message. The remaining variables
         display an (NA) and --Warning: NAs introduced by coercion\n")
 cat(" my_name as a numeric:", as.numeric(my_name),"\n")
 cat(" favorite_day as numeric:", as.numeric(favorite_day),"\n")
@@ -159,7 +159,7 @@ What happens if we change the order we use them--(i.e. g(f(x)))?
 
 
 **2j.Difference between cat and paste **
-How would you determine the difference between 
+How would you determine the difference between
 cat and paste using R documentation (from within RStudio)?
 *This could be accomplished by adding a (?) to the function to bring up the R documentation for each function*
 *example: ?paste*
@@ -178,7 +178,7 @@ To add a new line (\\n) to each character variable in a vector, you would first 
 **2k. cat and paste** Display the contents of the id function using a combination of cat and paste with the appropriate arguments for paste.
 ```{R Part 2 tmp, echo=FALSE}
 #Loads the variable with id vector that has paste, length, sep function acting on it.
-#1:length(id) sets the numbering limit using the vector as a final length limit. 
+#1:length(id) sets the numbering limit using the vector as a final length limit.
 numbered_list <- paste(1:length(id), id, sep = ". ")
 cat(numbered_list, sep = "\n")
 ```
