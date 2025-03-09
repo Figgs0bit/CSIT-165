@@ -192,6 +192,39 @@ message("-----------------------------------------------------------------------
 ```{R Part 4A, echo=FALSE}
 tic() # Starts timer
 
+#use while loop to sum all the vector elements.
+cnt <- 1 #Set the initial count start
+cntLim <- length(large_list[]) #Set the count limit, outer loop
+ZeroCntr = 0
+IntCntr = 0
+
+for(i in cnt:cntLim)
+{
+jcntLim <- length(large_list[[i]])
+message("Outer Loop", i)
+    for(j in cnt:jcntLim)
+    {
+      
+      
+      ZeroChk <- large_list[[i]][[j]] #loads the each element of each of the 3 vectors. 
+      
+      if(ZeroChk == 0)
+        {
+        #add to zero counter
+        ZeroCntr = ZeroCntr + 1 
+        }
+      else
+        {
+        #add to non-zero counter
+        IntCntr = IntCntr + 1
+          
+        }
+      
+    }
+}
+
+print(IntCntr)
+print(ZeroCntr)
 
 toc() # Records current timer and computes elapsed time since the matching call to tic()
 ```
